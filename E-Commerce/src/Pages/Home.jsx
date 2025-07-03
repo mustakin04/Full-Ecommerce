@@ -1,10 +1,11 @@
 import React from 'react'
-import Language from '../Component/Language'
+import Banner from '../Component/Banner'
+
 
 const Home = () => {
   return (
     <div>
-        <Language></Language>
+       <Banner></Banner>
     </div>
   )
 }
