@@ -24,7 +24,9 @@ const Banner = () => {
             <p>Electronics</p>
             <p className="my-[16px]">Home & Lifestyle</p>
             <p>Medicine</p>
-            <p className="my-[16px]">Baby’s & Toys</p>
+            <p className="my-[16px]">Sports & Outdoor</p>
+            <p >Baby’s & Toys</p>
+            <p className="my-[16px]">Groceries & Pets</p>
             <p>Health & Beauty</p>
           </div>
          </div>
