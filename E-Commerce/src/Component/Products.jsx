@@ -1,9 +1,9 @@
 import React from "react";
-import remote from "../assets/remote.png";
+
 import Discount from "./Discount";
 import Button from "./Button";
 const dis = "-40%";
-const Products = ({ value }) => {
+const Products = ({ value,remote }) => {
   return (
     <div className="relative  w-[270px] h-[250px] py-[35px] px-[40px] bg-[#f5f5f5] group">
       <img src={remote} alt="" />

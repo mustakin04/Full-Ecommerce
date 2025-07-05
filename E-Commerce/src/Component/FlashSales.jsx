@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
+import remote from "../assets/remote.png";
 
 
 const FlashSales = () => {
@@ -104,19 +105,19 @@ function SamplePrevArrow(props) {
         <div className=" w-full  mt-[40px]">
           <Slider  {...settings}>
             <div>
-              <Products value={true}></Products>
+              <Products value={true} remote={remote}></Products>
               <ProductInfo></ProductInfo>
             </div>
             <div>
-              <Products value={true}></Products>
+              <Products value={true} remote={remote}></Products>
               <ProductInfo></ProductInfo>
             </div>
             <div>
-              <Products value={true}></Products>
+              <Products value={true} remote={remote}></Products>
               <ProductInfo></ProductInfo>
             </div>
             <div>
-              <Products value={true}></Products>
+              <Products value={true} remote={remote}></Products>
               <ProductInfo></ProductInfo>
             </div>
           </Slider>
