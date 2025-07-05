@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../Component/Banner'
 import FlashSales from '../Component/FlashSales'
+import BrowseCategory from '../Component/BrowseCategory'
 
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <div>
        <Banner></Banner>
        <FlashSales></FlashSales>
+       <BrowseCategory></BrowseCategory>
     </div>
   )
 }
