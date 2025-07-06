@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./Pages/Home";
 import RootLayout from "./Layout/RootLayout";
 import Shop from "./Pages/Shop";
+import ProductDetails from './Pages/ProductDetails';
 
 function App() {
   const router = createBrowserRouter([
@@ -12,10 +13,17 @@ function App() {
     Component: RootLayout,
     children: [
       { index: true, Component: Home },
-      { path: "/shop", Component: Shop },
+      {
+        path: "shop",
+        children: [
+          { index: true, Component: Shop },
+          { path: "productdetails/:id", Component: ProductDetails }, // ✔️ NESTED
+        ],
+      },
     ],
   },
 ]);
+
 
   return (
     <>

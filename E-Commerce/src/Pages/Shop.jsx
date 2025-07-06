@@ -17,7 +17,7 @@ const Shop = () => {
         <div className="flex mb-[60px]">
           <div className="w-[20%]">al;a</div>
           <div className="w-[80%]">
-            <div className="">
+            <div className="" >
                 <PaginatedItems itemsPerPage={12}></PaginatedItems>
             </div>
           </div>
