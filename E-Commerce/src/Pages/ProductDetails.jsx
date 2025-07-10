@@ -5,13 +5,14 @@ import frame1 from "../assets/Frame 1.png";
 import frame2 from "../assets/Frame 2.png";
 import frame3 from "../assets/Frame 3.png";
 import frame4 from "../assets/Frame 4.png";
-import frame5 from "../assets/Frame 5.png";
 import { CiStar } from "react-icons/ci";
 import axios from "axios";
-import Button from "../Component/Button";
+import { useDispatch } from "react-redux";
+import { cardData } from "../Slices/CardSlice";
 
 const ProductDetails = () => {
   const path = useLocation();
+  const dispatch=useDispatch()
   const { id } = useParams();
   //  console.log(id,"13")
   const [select, setSelect] = useState();
@@ -23,7 +24,7 @@ const ProductDetails = () => {
         const response = await axios.get(
           "http://localhost:5000/api/v1/product/getProductlist"
         );
-        // console.log(response,"20")
+        console.log(response,"20")
         setProductData(response.data.data);
       } catch (error) {
         console.log("Error fetching product list:", error);
@@ -31,13 +32,30 @@ const ProductDetails = () => {
     };
     patchData();
   }, []);
+
+  
   const data = productData.find((product) => product._id === id);
-  console.log(data, "32");
+  // console.log(data, "32");
   useEffect(() => {
     if (data?.image) {
       setSelect(data?.image);
     }
   }, [data]);
+   const handleCardData=(product)=>{
+    console.log(product,"45")
+        dispatch(cardData(product))
+         const existing = JSON.parse(localStorage.getItem("cardDatas")) || [];
+         existing.push(product);
+        localStorage.setItem("cardDatas",JSON.stringify(existing))
+
+   }
+  if(!data){
+     return (
+      <Container className="mt-[100px] mb-[100px]">
+        <p className="text-center text-xl font-semibold">Loading product details...</p>
+      </Container>
+    );
+  }
   return (
     <div>
       <Container className='mb-[40px]'>
@@ -86,7 +104,8 @@ const ProductDetails = () => {
                <div className="w-[20px] h-[20px] bg-[#e07575] rounded-full "></div>
             </div>
             <div className="flex bg-[#db4444] w-[165px] font-Poppins font-medium text-[16px]
-             text-white text-center mt-[30px] rounded-md">
+             text-white text-center mt-[30px] rounded-md"
+             onClick={()=>handleCardData(data)}>
                <button className="px-[48px] py-[10px] ">Buy Now</button>
             </div>
           </div>

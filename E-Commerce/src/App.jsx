@@ -5,6 +5,7 @@ import Home from "./Pages/Home";
 import RootLayout from "./Layout/RootLayout";
 import Shop from "./Pages/Shop";
 import ProductDetails from './Pages/ProductDetails';
+import Card from "./Pages/Card";
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,7 @@ function App() {
           { path: "productdetails/:id", Component: ProductDetails }, // ✔️ NESTED
         ],
       },
+      {path:"/card", Component:Card}
     ],
   },
 ]);

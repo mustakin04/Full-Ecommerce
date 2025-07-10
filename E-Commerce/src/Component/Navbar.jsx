@@ -4,6 +4,7 @@ import logo from "../assets/Logo.png";
 import { IoSearch } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import { Link } from "react-router";
 
 
 const Navbar = () => {
@@ -36,7 +37,7 @@ const Navbar = () => {
             </div>
             <div className="flex gap-3 ">
                   <CiHeart className="text-xl" />
-                  <IoCartOutline className="text-xl" />
+                 <Link to="/card"> <IoCartOutline className="text-xl" /></Link>
                 </div>
             
         </div>
