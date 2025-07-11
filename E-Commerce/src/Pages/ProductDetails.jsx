@@ -24,7 +24,7 @@ const ProductDetails = () => {
         const response = await axios.get(
           "http://localhost:5000/api/v1/product/getProductlist"
         );
-        console.log(response,"20")
+        // console.log(response,"20")
         setProductData(response.data.data);
       } catch (error) {
         console.log("Error fetching product list:", error);
@@ -42,13 +42,14 @@ const ProductDetails = () => {
     }
   }, [data]);
    const handleCardData=(product)=>{
-    console.log(product,"45")
+    // console.log(product,"45")
         dispatch(cardData(product))
-         const existing = JSON.parse(localStorage.getItem("cardDatas")) || [];
-         existing.push(product);
-        localStorage.setItem("cardDatas",JSON.stringify(existing))
-
+        //  const existing = JSON.parse(localStorage.getItem("cardDatas")) || [];
+        //  existing.push(product);
+        // localStorage.setItem("cardDatas",JSON.stringify(existing))
+        //   console.log(existing,"52")
    }
+  
   if(!data){
      return (
       <Container className="mt-[100px] mb-[100px]">
