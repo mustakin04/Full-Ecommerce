@@ -7,6 +7,7 @@ import Shop from "./Pages/Shop";
 import ProductDetails from './Pages/ProductDetails';
 import Card from "./Pages/Card";
 import ChackOut from "./Pages/ChackOut";
+import Success from "./Pages/Success";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,7 +24,8 @@ function App() {
         ],
       },
       {path:"/card", Component:Card},
-       {path:"/checkout", Component:ChackOut}
+       {path:"/checkout", Component:ChackOut},
+       {path:"/success", Component:Success}
     ],
   },
 ]);

@@ -5,9 +5,13 @@ import { IoSearch } from "react-icons/io5";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { Link } from "react-router";
+import { useSelector } from "react-redux";
 
 
 const Navbar = () => {
+  const cardQuntity=useSelector((state)=>state.cardData.cardItem)
+  const cardLength=cardQuntity.length
+  console.log(cardLength)
   return (
     <div className="border-b-[1px] border-[#767676] ">
       <Container className="flex py-[16px] items-center">
@@ -37,7 +41,10 @@ const Navbar = () => {
             </div>
             <div className="flex gap-3 ">
                   <CiHeart className="text-xl" />
-                 <Link to="/card"> <IoCartOutline className="text-xl" /></Link>
+                  <div className="relative">
+                     <Link to="/card"> <IoCartOutline className="text-xl" /></Link>
+                     <div className="absolute top-[-16px] left-[17px] text-red-600 font-bold text-xl">{cardLength}</div>
+                  </div>
                 </div>
             
         </div>

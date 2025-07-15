@@ -13,7 +13,7 @@ export const cardSlice = createSlice({
           // console.log(state,"13")
           // console.log(action,"14")
            const findIndex=state.cardItem.findIndex((item)=> item._id===action.payload._id)
-           console.log(findIndex)
+          //  console.log(findIndex)
           //  
           if(findIndex >=0 ){
             state.cardItem[findIndex].cardQun++
@@ -25,8 +25,8 @@ export const cardSlice = createSlice({
     },
     
       counterData:(state,action)=>{
-         console.log(state)
-          console.log(action)
+        //  console.log(state)
+          // console.log(action)
           if(action.payload.type==="increment"){
             state.cardItem[action.payload.id].cardQun++
           }else{

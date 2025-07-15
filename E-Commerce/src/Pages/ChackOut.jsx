@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import { useLocation } from "react-router";
 import Container from "../Component/Container";
 import remote from "../assets/remote.png";
+import axios  from 'axios';
+import { useSelector } from 'react-redux';
 
 const ChackOut = () => {
+  const oderProduct=useSelector((state)=>state.cardData.cardItem)
+  console.log(oderProduct,'10')
   const location = useLocation();
   const [formData,setFormData]=useState({
       firstname: "",
@@ -18,9 +22,21 @@ const ChackOut = () => {
   const handleChange=(e)=>{
         setFormData({...formData,[e.target.name]:e.target.value})
   }
-  const handleSubmit=(e)=>{
+  const handleSubmit=async(e)=>{
     e.preventDefault();
-    console.log(formData,"16")
+    // console.log(formData,"16")
+    const response= await axios.post('http://localhost:5000/api/v1/chackout/createChackOut',{
+       firstName: formData.firstname,
+      companyName: formData.companyname,
+      streetAddress: formData.streetaddress,
+      apartment: formData.apartment,
+      city: formData.city,
+      phoneNumber: formData.phonenumber,
+      email: formData.email,
+      oderProduct:oderProduct,
+    })
+    .then((response)=>(window.location.href = response.data.pathurl))
+
     setFormData({
       firstname: "",
       companyname: "",
