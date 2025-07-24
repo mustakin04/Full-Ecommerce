@@ -20,8 +20,8 @@ const Navbar = () => {
         </div>
         <div className="w-[40%]">
           <ul className="flex font-Poppins font-normal text-[14px] text-black gap-[48px]">
-            <li>Home</li>
-            <li>Contact</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/shop ">Shop</Link></li>
             <li>About</li>
             <li>Sign Up</li>
           </ul>

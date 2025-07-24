@@ -1,9 +1,9 @@
 import React from "react";
 import Container from "./Container";
 import Card from "../Layout/Card";
-import Products from "./Products";
 import cat from "../../src/assets/cat.png"
-import ProductInfo from "./ProductInfo";
+import Product from "./Product";
+import ProductData from "./ProductData";
 
 const Explore = () => {
   return (
@@ -17,20 +17,20 @@ const Explore = () => {
         </div>
         <div className="flex justify-between mt-[60px]">
             <div>
-                <Products remote={cat}></Products>
-                <ProductInfo></ProductInfo>
+                <Product remote={cat}></Product>
+                <ProductData></ProductData>
             </div>
             <div>
-                <Products remote={cat}></Products>
-                <ProductInfo></ProductInfo>
+                <Product remote={cat}></Product>
+                <ProductData></ProductData>
             </div>
             <div>
-                <Products remote={cat}></Products>
-                <ProductInfo></ProductInfo>
+                <Product remote={cat}></Product>
+                <ProductData></ProductData>
             </div>
             <div>
-                <Products remote={cat}></Products>
-                <ProductInfo></ProductInfo>
+                <Product remote={cat}></Product>
+                <ProductData></ProductData>
             </div>
         </div>
       </Container>

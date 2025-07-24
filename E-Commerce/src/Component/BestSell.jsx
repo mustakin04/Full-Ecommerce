@@ -1,10 +1,10 @@
 import React from "react";
 import Container from "./Container";
 import Card from "../Layout/Card";
-import Products from "./Products";
 import remote from "../assets/remote.png";
-import ProductInfo from "./ProductInfo";
 import drees from "../assets/drees.png"
+import Product from "./Product";
+import ProductData from "./ProductData";
 
 const BestSell = () => {
   return (
@@ -26,20 +26,20 @@ const BestSell = () => {
         </div>
         <div className="flex justify-between mt-[60px]">
           <div>
-            <Products remote={remote}></Products>
-            <ProductInfo></ProductInfo>
+            <Product remote={remote}></Product>
+            <ProductData></ProductData>
           </div>
           <div>
-            <Products remote={drees}></Products>
-            <ProductInfo></ProductInfo>
+            <Product remote={drees}></Product>
+            <ProductData></ProductData>
           </div>
            <div>
-            <Products remote={drees}></Products>
-            <ProductInfo></ProductInfo>
+            <Product remote={drees}></Product>
+            <ProductData></ProductData>
           </div>
            <div>
-            <Products remote={drees}></Products>
-            <ProductInfo></ProductInfo>
+            <Product remote={drees}></Product>
+            <ProductData></ProductData>
           </div>
         </div>
       </Container>

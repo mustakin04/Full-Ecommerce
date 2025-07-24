@@ -15,7 +15,7 @@ const Shop = () => {
             <p className="font-Poppins font-normal text-[14px] mt-[80px] mb-[50px]">home / {location.pathname.split("/")[1]}</p>
         </div>
         <div className="flex mb-[60px]">
-          <div className="w-[20%]">al;a</div>
+          <div className="w-[20%] font-Poppins font-semibold text-[20px]">Category</div>
           <div className="w-[80%]">
             <div className="" >
                 <PaginatedItems itemsPerPage={12}></PaginatedItems>
