@@ -19,7 +19,7 @@ const FlashSales = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/v1/product/getProductlist");
+        const { data } = await axios.get("https://ecommerce-bu4k.onrender.com/api/v1/product/getProductList");
         setProducts(data.data);
       } catch (err) {
         console.error("Failed to fetch products", err);
