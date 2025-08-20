@@ -37,7 +37,7 @@ const PaginatedItems = ({ itemsPerPage }) => {
 
   useEffect(()=>{
        const fatchProduct=async()=>{
-         const data= await axios.get("http://localhost:5000/api/v1/product/getProductlist")
+         const data= await axios.get("https://ecommerce-bu4k.onrender.com/api/v1/product/getProductList",{withCredentials: true,})
           // console.log(data.data.data)
           SetProduct(data.data.data)
        }

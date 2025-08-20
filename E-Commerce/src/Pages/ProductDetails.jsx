@@ -22,7 +22,7 @@ const ProductDetails = () => {
     const patchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/product/getProductlist"
+         "https://ecommerce-bu4k.onrender.com/api/v1/product/getProductList",{withCredentials: true,}
         );
         // console.log(response,"20")
         setProductData(response.data.data);
